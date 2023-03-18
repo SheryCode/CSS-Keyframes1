@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:gilroy;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+    width: 100%;
+    padding: 0 50px;
+
+}
+h2{
+    margin-right: 45px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+h4{
+    margin-right: 30px;
+    font-size: 17px;
+    position: relative;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+h4::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    background-color: #000;
+}
+
+@keyframes anime {
+    0%{
+        left: 0;
+        width: 0;
+    }
+    50%{
+        left: 0;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0;
+    }
+}
+
+h4:hover::after{
+    animation-name: anime;
+    animation-duration: 1s;
+}
+h4:hover{
+    opacity: 1;
+}
